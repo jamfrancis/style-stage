@@ -1,0 +1,12 @@
+body {
+    font-family: var(--body-font);
+    font-size: var(--font-size);
+    margin: 0;
+    padding: 0;
+    background-color: var(--peach);
+
+    .skip-link {
+        visibility: hidden;
+        position: absolute;
+    }
+}
