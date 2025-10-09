@@ -1,0 +1,7 @@
+@import "var.css";
+
+footer {
+    font-family: var(--body-font);
+    background-color: var(--falu-red);
+    color: var(--peach);
+}
