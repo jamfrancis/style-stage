@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
 :root {
+    /* Colors */
     --falu-red: #6f1d1bff;
     --lion: #bb9457ff;
     --bistre: #432818ff;
     --brown: #99582aff;
     --peach: #ffe6a7ff;
 
-    --font-size: 1.5rem;
+    /* Font */
     --body-font: 'Special Elite', 'Courier New', Courier, monospace;
+    --font-size: 1.5rem;
+
+    /* Links */
+    --link-color: var(--bistre);
+    --link-hover-color: var(--falu-red);
 }
