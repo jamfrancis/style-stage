@@ -13,6 +13,6 @@
     --font-size: 1.5rem;
 
     /* Links */
-    --link-color: var(--bistre);
-    --link-hover-color: var(--falu-red);
+    --link-color: var(--falu-red);
+    --link-hover-color: var(--brown);
 }
