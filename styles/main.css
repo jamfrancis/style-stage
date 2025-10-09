@@ -1,3 +1,9 @@
-@import "cube.css";
+@import "var.css";
+
+@import "header.css";
+@import "main.css";
+@import "aside.css";
+@import "footer.css";
+
 @import "utility.css";
 @import "block.css";
