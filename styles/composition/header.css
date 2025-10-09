@@ -1,25 +1,87 @@
 header {
     .container {
+        background-color: var(--lion);
+
         h1 {
             font-size: calc(var(--font-size) * 2);
             font-weight: 600;
+            background-color: var(--peach);
+            margin: 0;
+            padding: 1rem 0;
         }
 
         h2 {
-            font-size: calc(var(--font-size) * 1.2);
+            margin: 0;
+            font-size: calc(var(--font-size) * .9);
             font-weight: 300;
+            background-color: var(--peach);
         }
-        
+
+        p {
+            margin-bottom: .5rem;
+        }
+
         & svg {
             width: 1.2rem;
         }
 
-        a {
+        a{
             text-decoration: none;
             color: var(--link-color);
             &:hover {
                 color: var(--link-hover-color);
             }
+            margin-top: 0;
+
         }
+    }
+}
+
+nav {
+    position: absolute;
+    top: .3rem;
+    right: .3rem;
+    z-index: 1000;
+    margin-left: 0;
+
+    ul{
+        position: absolute;
+        pointer-events: none;
+        height: 0;
+        right: 0;
+        margin: 0;
+        padding: 3rem;
+        background: var(--peach);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        box-shadow: 0 0 200px 100px var(--peach);
+
+
+        li {
+            display: block;
+            margin: 1rem;
+            a {
+                color: var(--link-color);
+                text-decoration: none;
+
+                &:hover {
+                    color: var(--link-hover-color);
+                }
+            }
+         } 
+    }
+
+    &::before {
+        content: "☰";
+        font-size: calc(var(--font-size) * 2);
+        display: inline-block;
+        padding: 0.6rem .9rem 0.6rem 3rem;
+    }
+
+    &:hover ul, &:focus-within ul {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+        height: auto;
     }
 }
