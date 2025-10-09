@@ -1,4 +1,6 @@
---root {
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+:root {
     --falu-red: #6f1d1bff;
     --lion: #bb9457ff;
     --bistre: #432818ff;
@@ -6,4 +8,5 @@
     --peach: #ffe6a7ff;
 
     --font-size: 1.5rem;
+    --body-font: 'Special Elite', 'Courier New', Courier, monospace;
 }
