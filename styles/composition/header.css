@@ -1,13 +1,14 @@
 header {
     .container {
         background-color: var(--lion);
+        padding: 0 0 1rem 0;
 
         h1 {
             font-size: calc(var(--font-size) * 2);
             font-weight: 600;
             background-color: var(--peach);
             margin: 0;
-            padding: 1rem 0;
+            padding: 1rem 4rem 1rem 1rem;
         }
 
         h2 {
@@ -15,25 +16,24 @@ header {
             font-size: calc(var(--font-size) * .9);
             font-weight: 300;
             background-color: var(--peach);
+            padding: 1rem;
         }
 
         p {
             margin-bottom: .5rem;
+            text-align: left;
+            padding: 0 1rem;
         }
 
         & svg {
             width: 1.2rem;
-        }
-
-        a{
-            text-decoration: none;
-            color: var(--link-color);
-            &:hover {
-                color: var(--link-hover-color);
-            }
-            margin-top: 0;
 
         }
+
+        .link-github {
+            padding: 0 1rem;
+        }
+
     }
 }
 
@@ -41,12 +41,9 @@ nav {
     position: absolute;
     top: .3rem;
     right: .3rem;
-    z-index: 1000;
-    margin-left: 0;
 
     ul{
         position: absolute;
-        pointer-events: none;
         height: 0;
         right: 0;
         margin: 0;
@@ -54,20 +51,12 @@ nav {
         background: var(--peach);
         opacity: 0;
         transition: opacity 0.3s ease;
-        box-shadow: 0 0 200px 100px var(--peach);
+        box-shadow: 0 0 300px 200px var(--peach);
 
 
         li {
             display: block;
             margin: 1rem;
-            a {
-                color: var(--link-color);
-                text-decoration: none;
-
-                &:hover {
-                    color: var(--link-hover-color);
-                }
-            }
          } 
     }
 
@@ -78,6 +67,15 @@ nav {
         padding: 0.6rem .9rem 0.6rem 3rem;
     }
 
+    &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px;      
+        height: 200px;     
+    }
+
     &:hover ul, &:focus-within ul {
         display: block;
         opacity: 1;
@@ -85,3 +83,4 @@ nav {
         height: auto;
     }
 }
+

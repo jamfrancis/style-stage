@@ -1,0 +1,11 @@
+main {
+    .container {
+        #about {
+            section.container {
+                p {
+                    padding: 1rem;
+                }
+            }
+        }
+    }
+}

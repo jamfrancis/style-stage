@@ -1,0 +1,19 @@
+:is(a) {
+    color: var(--link-color);
+    text-decoration: none;
+
+    &:hover {
+        color: var(--link-hover-color);
+    }
+}
+
+:is(h2) {
+
+}
+
+:is(section.container p) {
+    margin: 1rem;
+    background-color: var(--peach);
+    box-shadow: 0 0 10px var(--bistre);
+    border-radius: 8px;
+}
