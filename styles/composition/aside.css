@@ -1,0 +1,43 @@
+div.container {
+    padding: 30px;
+}
+
+#styles .container {
+    padding: 30px;
+    ul {
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+        align-content: center;
+        padding: 0px;
+    }
+
+    li {
+        width: 150px;
+        height: 100px;
+        background-color: var(--brown);
+        color: var(--peach);
+        padding: 40px;
+        align-content: center;
+        
+        a {
+            display: block;
+            padding-bottom: 10px;
+            color: var(--peach);
+            &:hover {
+                color: white;
+            }
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+        ul {
+            flex-direction: column;
+            align-items: center;
+        }
+        li {
+            margin: 20px;
+        }
+    }
+
+}

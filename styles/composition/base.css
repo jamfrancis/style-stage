@@ -10,3 +10,15 @@ body {
         position: absolute;
     }
 }
+
+a {
+    color: var(--falu-red);
+    &:hover {
+        color: var(--brown);
+    }
+}
+
+svg {
+    width: 1.5rem;
+    fill: var(--lion);
+}

@@ -1,0 +1,6 @@
+#about .container, article:not(:first-of-type) {
+    margin: 30px;
+    padding: 10px;
+    border: solid var(--bistre);
+    border-radius: 10px;
+}
