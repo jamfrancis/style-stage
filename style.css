@@ -3,6 +3,7 @@
 @import "styles/composition/base.css";
 @import "styles/composition/header.css";
 @import "styles/composition/main.css";
+@import "styles/composition/article.css";
 @import "styles/composition/aside.css";
 @import "styles/composition/footer.css";
 

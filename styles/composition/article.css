@@ -1,0 +1,98 @@
+/* Horizontal scroll container */
+main > .container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 0; /* no spacing between slides */
+  position: relative;
+  padding-top: 3.5rem; /* space for top buttons */
+  scrollbar-width: none;
+}
+main > .container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Each article takes full viewport width */
+main > .container > article {
+  flex: 0 0 100%;
+  width: 100vw;
+  min-height: 70vh;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  scroll-snap-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 2rem;
+  text-align: center;
+}
+main > .container > article:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Top slider buttons */
+main > .container::before,
+main > .container::after {
+  content: '';
+  position: absolute;
+  top: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: #222;
+  color: #fff;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  text-align: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.3s;
+}
+main > .container:hover::before,
+main > .container:hover::after {
+  background: #444;
+}
+
+/* Left button */
+main > .container::before {
+  content: '‹';
+  left: 1rem;
+}
+
+/* Right button */
+main > .container::after {
+  content: '›';
+  right: 1rem;
+}
+
+/* Highlight visible card (optional visual feedback) */
+main > .container > article:target {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* Responsive fallback (stack vertically) */
+@media (max-width: 768px) {
+  main > .container {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    padding-top: 1rem;
+  }
+
+  main > .container::before,
+  main > .container::after {
+    display: none;
+  }
+
+  main > .container > article {
+    flex: 1 1 100%;
+    width: 100%;
+    min-height: auto;
+  }
+}
