@@ -36,59 +36,10 @@ main > .container > article:hover {
   box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
-/* Top slider buttons */
-main > .container::before,
-main > .container::after {
-  content: '';
-  position: absolute;
-  top: 1rem;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  background: #222;
-  color: #fff;
-  font-size: 1.8rem;
-  line-height: 2.5rem;
-  text-align: center;
-  cursor: pointer;
-  z-index: 2;
-  transition: background 0.3s;
-}
-main > .container:hover::before,
-main > .container:hover::after {
-  background: #444;
-}
 
-/* Left button */
-main > .container::before {
-  content: '‹';
-  left: 1rem;
-}
-
-/* Right button */
-main > .container::after {
-  content: '›';
-  right: 1rem;
-}
-
-/* Highlight visible card (optional visual feedback) */
-main > .container > article:target {
-  transform: scale(1.03);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-}
 
 /* Responsive fallback (stack vertically) */
 @media (max-width: 768px) {
-  main > .container {
-    flex-wrap: wrap;
-    overflow-x: visible;
-    padding-top: 1rem;
-  }
-
-  main > .container::before,
-  main > .container::after {
-    display: none;
-  }
 
   main > .container > article {
     flex: 1 1 100%;
