@@ -1,20 +1,71 @@
-header, nav {
+header {
     background-color: var(--brown);
     color: var(--peach);
     margin: 0px;
-    a {
-        color: var(--peach);
-        &:hover {
-            color: white;
-        }
-    }
-    ul {
+
+    nav {
         display: flex;
-        justify-content: space-around;
-        margin: 0px;
-        padding: 10px;
-        list-style: none;
-        background-color: var(--brown);
+        ul {
+            opacity: 1;
+            box-shadow: none;
+            background: none;
+            padding: 0;
+            display: flex;
+
+            a {
+                color: var(--peach);
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+
+    }
+}
+
+
+
+@media (max-width: 500px) {
+    nav {
+    position: absolute;
+    top: .3rem;
+    right: .3rem;
+
+    ul{
+        position: absolute;
+        height: 0;
+        right: 0;
+        margin: 0;
+        padding: 3rem;
+        background: var(--peach);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        box-shadow: 0 0 300px 200px var(--peach);
+
+
+        li {
+            display: block;
+            margin: 1rem;
+         } 
     }
 
+    &::before {
+        content: "☰";
+        font-size: calc(var(--font-size) * 2);
+        display: inline-block;
+        padding: 0.6rem .9rem 0.6rem 3rem;
+    }
+
+    &:hover ul, &:focus-within ul {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+        height: auto;
+    }
 }
+}
+
+
+
+
+    
